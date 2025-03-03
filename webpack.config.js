@@ -8,11 +8,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
   },
-  devServer: {
-    historyApiFallback: true,
-    open: true,
-    watchFiles: path.join(__dirname, 'src'),
-  },
+  //devServer: {
+    //historyApiFallback: true,
+    //open: true,
+   // watchFiles: path.join(__dirname, 'src'),
+  //},
   module: {
     rules: [
       {
@@ -32,7 +32,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCSSExtractPlugin.loader, 'css-loader'],
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
